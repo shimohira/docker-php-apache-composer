@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y libpng12-dev \
 RUN apt-get clean
 
 #install and configure php extension
-RUN docker-php-ext-install -j$(nproc) \
+RUN docker-php-ext-install \
   mcrypt \
   intl \
   pcntl \
