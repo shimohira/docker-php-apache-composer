@@ -12,8 +12,8 @@ RUN apt-get update && apt-get install -y libpng12-dev \
 # clean after install
 RUN apt-get clean
 
-#install and configure php extension
-RUN docker-php-ext-install \
+# install php extension
+RUN docker-php-ext-install -j$(nproc) \
   mcrypt \
   intl \
   pcntl \
@@ -24,6 +24,7 @@ RUN docker-php-ext-install \
   pdo_pgsql \
   zip
 
+# configure php extension
 RUN docker-php-ext-configure \
   gd --with-png-dir=/usr/include/ \
   --with-jpeg-dir=/usr/include/ \
