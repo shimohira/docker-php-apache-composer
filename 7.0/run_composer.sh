@@ -1,3 +1,5 @@
 #!/bin/bash
 
-su composer -c "/bin/composer $@"
+opts=$@
+echo $opts
+su composer -c "/bin/composer $opts"
