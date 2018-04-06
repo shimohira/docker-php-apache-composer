@@ -1,6 +1,6 @@
 # php-apache-composer
 
-This repo used for build docker images : [docker link](https://hub.docker.com/r/shimohira/php-7.0-apache-composer/)
+This repo used for build docker images : [docker link](https://hub.docker.com/r/shimohira/php-apache-composer/)
 
 Docker base from build php:0.7-apache :
 1. composer installation
