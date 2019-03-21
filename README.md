@@ -1,5 +1,6 @@
 ## Supported tags
-- latest [(7.0)](https://github.com/shimohira/php-apache-composer/tree/master/7.0)
+- latest [(7.2)](https://github.com/shimohira/php-apache-composer/tree/master/7.2)
+- 7.2-apache [(7.2)](https://github.com/shimohira/php-apache-composer/tree/master/7.2)
 - 7.0-apache [(7.0)](https://github.com/shimohira/php-apache-composer/tree/master/7.0)
 - 5.6-apache [(5.6)](https://github.com/shimohira/php-apache-composer/tree/5.6/5.6)
 
