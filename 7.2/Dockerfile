@@ -14,7 +14,6 @@ RUN apt-get clean
 
 # install php extension
 RUN /usr/local/bin/docker-php-ext-install -j$(nproc) \
-  mcrypt \
   intl \
   pcntl \
   gd \
@@ -24,6 +23,9 @@ RUN /usr/local/bin/docker-php-ext-install -j$(nproc) \
   pdo_pgsql \
   zip \
   mysqli
+
+RUN pecl install mcrypt-1.0.2 \
+  && docker-php-ext-enable mcrypt
 
 # configure php extension
 RUN /usr/local/bin/docker-php-ext-configure \
