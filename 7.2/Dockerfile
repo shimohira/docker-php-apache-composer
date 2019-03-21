@@ -1,4 +1,4 @@
-FROM php:7.0-apache
+FROM php:7.2-apache
 
 # install the PHP extensions we need
 RUN apt-get update && apt-get install -y libpng12-dev \
