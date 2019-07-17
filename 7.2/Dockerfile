@@ -25,7 +25,10 @@ RUN /usr/local/bin/docker-php-ext-install -j$(nproc) \
   mysqli
 
 RUN pecl install mcrypt-1.0.2 \
-  && docker-php-ext-enable mcrypt
+  && docker-php-ext-enable mcrypt \
+  && pecl install -o -f redis \
+  && docker-php-ext-enable redis \
+  && rm -rf /tmp/pear
 
 # configure php extension
 RUN /usr/local/bin/docker-php-ext-configure \
